@@ -6,10 +6,11 @@
 </head>
 <body align="center">
 	<h1>Лекция 4 - Формы и файлы</h1>
-	<h2>Форма</h2>
-	<div id="output">Выберите файлы и заполните поле:</div><br>
+	<a href="index.php">Главная</a><br><br>
+	<h2>Форма загрузки текста</h2>
+	<div id="output">Выберите файлы и/или заполните поле:</div><br>
 	<form method="post" enctype="multipart/form-data" action="active_form.php">
-		<input type="file" name="files[]" accept="text/plain" multiple> <br><br>
+		<input type="file" name="files[]" accept="text/plain" multiple><br><br>
 		<textarea name="str" cols="100" rows="25"></textarea><br><br>
 		<input type="submit" name="btn_active_form" value="Выполнить">
 	</form>
