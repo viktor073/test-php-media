@@ -61,4 +61,4 @@ ALTER TABLE `uploaded_text`
 --
 ALTER TABLE `word`
   ADD PRIMARY KEY (`id`);
-
+COMMIT;
