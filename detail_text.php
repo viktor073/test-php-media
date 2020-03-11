@@ -10,7 +10,9 @@
 		<?
 			if (!empty($_GET['id'])) {
 				$id = $_GET['id'];
-				require("db_connection.php");
+				require ('autoloadClass.php');
+				require("dbConf.php");
+				$pdo = singlePDO::GetInst($host, $name_bd, $user_name, $user_password);
 				$selectQuery = "SELECT content, date_ex, words_count FROM uploaded_text WHERE id='$id'";
 				$row = $pdo->query($selectQuery)->fetch();
 				if($row == []){echo "Array null.";}

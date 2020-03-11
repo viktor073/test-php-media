@@ -14,7 +14,9 @@
 			<td>Подробнее</td>
 		</tr>
 		<?
-			require("db_connection.php");
+			require('autoloadClass.php');
+			require("dbConf.php");
+			$pdo = singlePDO::GetInst($host, $name_bd, $user_name, $user_password);
 			$selectQuery = 'SELECT * FROM uploaded_text';
 			$rowAll = $pdo->query($selectQuery)->fetchAll();
 			if($rowAll == []){echo "Array null.";}
